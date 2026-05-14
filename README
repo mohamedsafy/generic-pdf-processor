@@ -11,6 +11,7 @@ This Repo is basically a masterclass in DevOps and its best practices ...
 In this phase, a production ready and secure dockerfile image is created for the generic-pdf-processor module.
 The image should have the ability to have three targets: prod, dev, debug.
 the prod tag should be lightweight as much as possible and with least attack surface, while the dev and debug should offer maximum versatility for developers with quality of life improvements for quick developing.
+In addition, testing should be handled accordingly.
 
 
 ##Phase #2: Scalable Deployment
