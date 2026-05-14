@@ -2,10 +2,10 @@ services:
   generic-pdf-processor:
     image: generic-pdf-processor
     build: 
-      context: ./generic-pdf-processor
+      context: ./generic-pdf-processor-python
       target: dev
     ports:
       - 4000:4000
     volumes:
-      - ./generic-pdf-processor:/app
+      - ./generic-pdf-processor-python:/app
     

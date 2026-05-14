@@ -1,8 +1,13 @@
 services:
   generic-pdf-processor:
+    build:
+      context: ./generic-pdf-processor-python
+      target: test
     environment:
       - PYTEST=TRUE
     command:
+      - python
+      - -m
       - pytest
       - tests/test_pdf_watermark.py
       - -v
