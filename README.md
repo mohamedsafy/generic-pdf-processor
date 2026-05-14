@@ -7,11 +7,7 @@ The main objective of this project is to understand the concept of modern micros
 
 This Repo is basically a masterclass in DevOps and its best practices ...
 
-<<<<<<< HEAD
 ## Phase #1: Dockerization ⏳ [70% Complete - Security and lightweight left]
-=======
-## Phase #1: Dockerization ✅
->>>>>>> 69d7c0c63fba60243ac75694e74cd32509d54899
 
 In this phase, a production ready and secure dockerfile image is created for the generic-pdf-processor module.
 The image should have the ability to have three targets: prod, dev, debug.
