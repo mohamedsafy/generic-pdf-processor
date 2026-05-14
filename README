@@ -1,4 +1,4 @@
-#Generic PDF Processor
+# Generic PDF Processor
 
 This project is a microservice that is essentially just an empty PDF Processor, it takes a PDF File through a REST API Post request and does nothing to it except it writes a "Processed" in Red over each page in the PDF file.
 
@@ -6,7 +6,7 @@ The main objective of this project is to understand the concept of modern micros
 
 This Repo is basically a masterclass in DevOps and its best practices ...
 
-##Phase #1: Dockerization
+## Phase #1: Dockerization
 
 In this phase, a production ready and secure dockerfile image is created for the generic-pdf-processor module.
 The image should have the ability to have three targets: prod, dev, debug.
@@ -14,30 +14,30 @@ the prod tag should be lightweight as much as possible and with least attack sur
 In addition, testing should be handled accordingly.
 
 
-##Phase #2: Scalable Deployment
+## Phase #2: Scalable Deployment
 After building the docker images, what's next is using kubernettes to deploy a scalable appication for the processor, where a gateway of sort will load balance incoming requests on processor instances. In addition, automatically scaling up and down the cluster depending on the workload and requests.
 
-##Phase #3: Monitored Solution
+## Phase #3: Monitored Solution
 Using Ganfara to monitor key performance metrics of the deployment and incoming traffic. 
 
-##Phase #4: Cloud Deployments
+## Phase #4: Cloud Deployments
 Running kubernettes cluster locally was a step torwards complete cloud adoption, 
 this phase will be split into to, Bare Metal AWS EC2 instance and Fully managed AWS Services. The output of both phases will be saved, where two deployments will be present thourghout the project.
 
-###Phase #5.A: AWS EC2 Bare Metal 
+### Phase #5.A: AWS EC2 Bare Metal 
 this phase will not get into the cloud providers obscure and extensive managed services for deploying applications, it will only use simple vm instances and deploy solutions directly on them.
 The catch is that Ansible will be used to configure said instances. AWS EC2 instance will be used only.
 
-###Phase #5.B: AWS Managed ECS/EKS Cloud Deployments
+### Phase #5.B: AWS Managed ECS/EKS Cloud Deployments
 Beaking into cloud realm slowly and abstracting many of Linux Adminstration tasks previously by using fully managed AWS services for hosting and deploying containerized applications.
 
-##Phase #6: Github Automation
+## Phase #6: Github Automation
 The repo shall be pushed to Github where the realm of Github Actions' Workflows is entered. The repo shall offer CI pipeline for automatically running tests and building the image and pushing it to a github package. From which, CD pipelines will follow, remotely deploying the last published images to both deployment A and B.
 
-##Phase #7: Automatic provisioning
+## Phase #7: Automatic provisioning
 The final stretch run of the project, using Terraform to automatically provision both A and B deployments.
 
-##Phase #8: Extend Solution
+## Phase #8: Extend Solution
 Use the available infrastructure to extend the solution, adding more use cases and features.
 
 
