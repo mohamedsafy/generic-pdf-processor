@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f6f7f9;
+  color: #15171a;
+}
+
+main {
+  max-width: 520px;
+  margin: 10vh auto;
+  padding: 24px;
+}
+
+form,
+section {
+  display: grid;
+  gap: 14px;
+}
+
+label {
+  display: flex;
+  gap: 8px;
+}
+
+button,
+input[type="file"] {
+  font: inherit;
+}
+
+button {
+  padding: 10px 14px;
+  border: 0;
+  background: #15171a;
+  color: white;
+  cursor: pointer;
+}

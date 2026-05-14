@@ -11,4 +11,14 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
+  frontend-react:
+    image: frontend-react
+    build: 
+      context: ./frontend-react
+      target: prod
+    ports:
+      - 80:80
+    depends_on:
+      generic-pdf-processor:
+        condition: service_healthy
     
