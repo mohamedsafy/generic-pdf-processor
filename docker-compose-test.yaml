@@ -1,0 +1,9 @@
+services:
+  generic-pdf-processor:
+    environment:
+      - PYTEST=TRUE
+    command:
+      - pytest
+      - tests/test_pdf_watermark.py
+      - -v
+    
