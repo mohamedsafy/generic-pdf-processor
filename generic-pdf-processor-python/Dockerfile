@@ -4,7 +4,9 @@ WORKDIR /app
 
 COPY requirements.txt .
 
-RUN python -m pip install --no-cache-dir -r requirements.txt
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip config set global.cache-dir /root/.cache/pip && \
+    pip install -r requirements.txt
 
 COPY . .
 
@@ -12,7 +14,7 @@ FROM base AS dev
 
 COPY requirements-dev.txt .
 
-RUN python -m pip install --no-cache-dir -r requirements-dev.txt
+RUN pip install -r requirements-dev.txt
 
 CMD ["fastapi", "dev", "src/generic_pdf_processor/main.py", "--host", "0.0.0.0", "--port", "4000"]
 

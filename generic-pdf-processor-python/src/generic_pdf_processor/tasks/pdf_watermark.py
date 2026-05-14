@@ -43,8 +43,8 @@ def add_watermark(pdf_file: io.IOBase) -> io.BytesIO:
         watermark_bytes = create_watermark_pdf(page_width, page_height)
         watermark_page = PdfReader(io.BytesIO(watermark_bytes)).pages[0]
 
-        page.merge_page(watermark_page)
-        writer.add_page(page)
+        writer_page = writer.add_page(page)
+        writer_page.merge_page(watermark_page)
 
     output = io.BytesIO()
     writer.write(output)
